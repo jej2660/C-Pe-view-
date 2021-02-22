@@ -13,7 +13,6 @@ typedef struct LOCAL_HEADER {
 	WORD Compression;
 	WORD Mod_Time;
 	WORD Mod_Date;
-	WORD Crc;
 	DWORD Crc_32;
 	DWORD Compressed_Size;
 	DWORD Uncompressed;
@@ -27,18 +26,17 @@ typedef struct LOCAL_HEADER {
 
 void Print(struct LOCAL_HEADER h)
 {
-	printf("Signature		: %02X\n",h.Signature);
-	printf("Vesrion			: %02X\n",h.Vesrion);
-	printf("Flags			: %02X\n",h.Flags); 
-	printf("Compression		: %02X\n",h.Compression);
-	printf("Mod_Time		: %02X\n", h.Mod_Time);
-	printf("Mod_Date		: %02X\n", h.Mod_Date);
-	printf("Crc_32			: %02X\n", h.Crc);
-	printf("Crc_32			: %02X\n",h.Crc_32);
-	printf("Compressed_Size		: %02X\n",h.Compressed_Size);
-	printf("Uncompressed		: %02X\n",h.Uncompressed);
-	printf("File_Name_Size		: %02X\n",h.File_Name_Size);
-	printf("Exrtra_field_Size	: %02X\n",h.Exrtra_field_Size);
+	printf("Signature		: %08X\n",h.Signature);
+	printf("Vesrion			: %08X\n",h.Vesrion);
+	printf("Flags			: %08X\n",h.Flags); 
+	printf("Compression		: %08X\n",h.Compression);
+	printf("Mod_Time		: %08X\n", h.Mod_Time);
+	printf("Mod_Date		: %08X\n", h.Mod_Date);
+	printf("Crc_32			: %08X\n",h.Crc_32);
+	printf("Compressed_Size		: %08X\n",h.Compressed_Size);
+	printf("Uncompressed		: %08X\n",h.Uncompressed);
+	printf("File_Name_Size		: %08X\n",h.File_Name_Size);
+	printf("Exrtra_field_Size	: %08X\n",h.Exrtra_field_Size);
 }
 int main()
 {
