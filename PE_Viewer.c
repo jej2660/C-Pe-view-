@@ -5,7 +5,7 @@ typedef unsigned char BYTE;
 typedef unsigned short WORD;
 typedef unsigned int DWORD;
 typedef unsigned long long QWORD;
-
+#pragma pack(1)
 typedef struct LOCAL_HEADER {
 	DWORD Signature;
 	WORD Vesrion;
